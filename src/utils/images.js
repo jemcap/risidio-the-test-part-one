@@ -1,0 +1,11 @@
+export { default as WithTheStars } from "../assets/stars_featured.png";
+export { default as ArtistImage } from "../assets/artist_image.png";
+export { default as JulienImage } from "../assets/julien_img.png";
+export { default as MariaImage } from "../assets/maria_img.png";
+export { default as NightSkyThumbnail } from "../assets/night_sky.png";
+export { default as FutureThumbnail } from "../assets/future_thumbnail.png";
+export { default as MotherNatureThumbnail } from "../assets/mother_nature_thumbnail.png";
+export { default as SummerThumbnail } from "../assets/summer_thumbnail.png";
+export { default as QuietThumbnail } from "../assets/quiet_thumbnail.png";
+export { default as TravelThumbnail } from "../assets/travel_thumbnail.png";
+export { default as TheRainThumbnail } from "../assets/the_rain_thumbnail.png";
