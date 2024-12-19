@@ -2,9 +2,9 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 
-import Home from "./routes/home.routes";
-import Collection from "./routes/collection.routes";
-import Wallet from "./routes/wallet.routes";
+import Home from "./routes/Home";
+import Collection from "./routes/Collection";
+import Wallet from "./routes/Wallet";
 
 import { WalletProvider } from "./context/walletContext";
 import { CartProvider } from "./context/CartContext";

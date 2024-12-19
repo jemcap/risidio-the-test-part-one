@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react";
 import { WalletContext } from "../context/walletContext";
 import { useNavigate } from "react-router-dom";
-import { use } from "react";
 
 const Wallet = () => {
   const { isWalletConnected, connectWallet } = useContext(WalletContext);
@@ -20,7 +19,6 @@ const Wallet = () => {
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-[500px] lg:h-[174px] ">
-        {/* Example wallet options */}
         <button
           onClick={connectWallet}
           className="w-[191px] px-6 py-3 bg-[#3B3B3B] text-white rounded-lg hover:bg-[#555] transition duration-300"

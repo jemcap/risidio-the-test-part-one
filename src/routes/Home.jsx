@@ -1,6 +1,6 @@
 import React from "react";
-import FeaturedComponent from "../components/Home/featured.component";
-import Collections from "../components/Home/collections.component";
+import FeaturedComponent from "../components/Home/FeaturedProject";
+import Collections from "../components/Home/Collections";
 
 const Home = () => {
   return (

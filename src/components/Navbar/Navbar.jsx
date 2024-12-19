@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { WalletContext } from "../../context/walletContext";
 import { CartContext } from "../../context/CartContext";
-import Cart from "../Cart/cart.component";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
   const { isWalletConnected } = useContext(WalletContext);

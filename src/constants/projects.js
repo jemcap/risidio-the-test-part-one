@@ -1,13 +1,41 @@
-import React from "react";
-import Card from "./card.component";
-import {
-  NightSkyThumbnail,
-  FutureThumbnail,
-  MotherNatureThumbnail,
-  JulienImage,
-  MariaImage,
-} from "../../utils/images";
-import { ArtistImage, WithTheStars } from "../../utils/images";
+export const nftCollections = [
+  {
+    id: 1,
+    image: NightSkyThumbnail,
+    title: "Night is coming",
+    price: "0.12 BTC",
+  },
+  {
+    id: 2,
+    image: WithTheStars,
+    title: "With the stars",
+    price: "0.12 BTC",
+  },
+  {
+    id: 3,
+    image: SummerThumbnail,
+    title: "Summer",
+    price: "0.12 BTC",
+  },
+  {
+    id: 4,
+    image: QuietThumbnail,
+    title: "Quiet",
+    price: "0.14 BTC",
+  },
+  {
+    id: 5,
+    image: TravelThumbnail,
+    title: "Travel",
+    price: "0.12 BTC",
+  },
+  {
+    id: 6,
+    image: TheRainThumbnail,
+    title: "The rain",
+    price: "0.18 BTC",
+  },
+];
 
 const cardCollections = [
   {
@@ -44,22 +72,3 @@ const cardCollections = [
     artistImage: MariaImage,
   },
 ];
-
-const Collections = () => {
-  return (
-    <section className=" h-full align-elements rounded-[30px]">
-      <div className="mt-24">
-        <h1 className="text-[24px] font-[800] leading-[29.05px]">
-          Collections
-        </h1>
-        <div className="flex flex-col lg:flex-row gap-[32px] mt-10 mb-[153px] h-full">
-          {cardCollections.map((card) => (
-            <Card key={card.id} {...card} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Collections;

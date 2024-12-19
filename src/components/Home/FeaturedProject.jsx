@@ -1,12 +1,12 @@
 import { useContext } from "react";
 
 import { ArtistImage, WithTheStars } from "../../utils/images";
-import ProgressBar from "./progress-bar.component";
+import ProgressBar from "./ProgressBar";
 import { CartContext } from "../../context/CartContext";
 import { WalletContext } from "../../context/walletContext";
 import { Link } from "react-router-dom";
 
-const FeaturedComponent = () => {
+const FeaturedProject = () => {
   const { addToCart } = useContext(CartContext);
   const { isWalletConnected } = useContext(WalletContext);
 
@@ -87,4 +87,4 @@ const FeaturedComponent = () => {
   );
 };
 
-export default FeaturedComponent;
+export default FeaturedProject;

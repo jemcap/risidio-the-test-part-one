@@ -1,57 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import {
-  NightSkyThumbnail,
-  FutureThumbnail,
-  MotherNatureThumbnail,
-} from "../../utils/images";
-import { ArtistImage, WithTheStars } from "../../utils/images";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-const cardCollections = [
-  {
-    id: 1,
-    image: NightSkyThumbnail,
-    title: "Night Sky",
-    price: "0.12BTC - 0.18BBTC",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo. Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo. Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo",
-    tags: "120 NTF",
-    artist: "Léa Jacquot",
-    artistImage: ArtistImage,
-  },
-  {
-    id: 2,
-    image: FutureThumbnail,
-    title: "Future",
-    price: "0.12BTC - 0.18BBTC",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo. Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo. Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo",
-    tags: "120 NTF",
-    artist: "Léa Jacquot",
-    artistImage: ArtistImage,
-  },
-  {
-    id: 3,
-    image: MotherNatureThumbnail,
-    title: "Mother Nature",
-    price: "0.12BTC - 0.18BBTC",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo. Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo. Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempo",
-    tags: "120 NTF",
-    artist: "Léa Jacquot",
-    artistImage: ArtistImage,
-  },
-];
 const ProjectCollection = () => {
   const { id } = useParams();
+  const { cardCollections } = useContext(CartContext);
+
   const collection = cardCollections.find((card) => card.id === parseInt(id));
-  console.log(collection);
 
   if (!collection) {
     return <p>Collection not found</p>;
   }
-
-  const { image, title, description, artist } = collection;
+  const { image, title, description, artist, artistImage } = collection;
 
   return (
     <section className="h-auto lg:h-[518px] align-elements rounded-[30px] p-6 lg:p-[74px]">
@@ -70,7 +31,7 @@ const ProjectCollection = () => {
             {description}
           </p>
           <div className="flex items-center gap-4 justify-center lg:justify-start mt-[29px]">
-            <img src={ArtistImage} alt="Artist image" width={68} height={68} />
+            <img src={artistImage} alt="Artist image" width={68} height={68} />
             <div className="text-start">
               <small className="text-[12px] text-[#617587]">Artist</small>
               <p className="text-[24px] leading-[29.05px]">{artist}</p>

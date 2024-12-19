@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectCollection from "../components/Collection/projectcollection.component";
-import NftCollection from "../components/Collection/nftcollection.component";
+import ProjectCollection from "../components/Collection/ProjectCollection";
+import NftCollection from "../components/Collection/NftCollection";
 
 const Collection = () => {
   return (
