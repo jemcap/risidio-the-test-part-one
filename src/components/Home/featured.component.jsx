@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import { ArtistImage, WithTheStars } from "../../utils/images";
-
+import ProgressBar from "./progress-bar.component";
 import { CartContext } from "../../context/CartContext";
 
 const FeaturedComponent = () => {
@@ -19,13 +19,13 @@ const FeaturedComponent = () => {
 
   return (
     <>
-      {/* <section>
+      <section>
         <ProgressBar />
-      </section> */}
-      <section className="bg-[#E6E9F2]  h-auto lg:h-[518px] align-elements rounded-[30px] p-6 lg:p-[74px]">
+      </section>
+      <section className="bg-[#E6E9F2] h-auto lg:h-[518px] align-elements rounded-[30px] p-6 lg:p-[74px]">
         <div className="flex flex-col-reverse lg:flex-row justify-between items-center h-full gap-6 lg:gap-0">
           <div className="text-center lg:text-left">
-            <label className="bg-[#FADFE4] py-[9px] px-[35px] rounded-[49px]">
+            <label className="bg-[#FADFE4] py-[9px] px-[35px] rounded-[49px] text-[12px]">
               Trending Now
             </label>
             <p className="text-[#617587] text-[18px] lg:text-[24px] leading-[29px] font-[400] mt-[20px] lg:mt-[37px]">
