@@ -15,11 +15,11 @@ const Wallet = () => {
 
   return (
     <div className="h-screen bg-[#E6E9F2] flex flex-col justify-center items-center p-6">
-      <h1 className="text-3xl font-extrabold text-[#2D2D2D] mb-[90px]">
+      <h1 className="text-3xl font-extrabold text-[#2D2D2D] mb-[90px] text-center">
         Choose the wallet to connect
       </h1>
 
-      <div className="grid grid-cols-3 gap-4 h-[174px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-[500px] lg:h-[174px] ">
         {/* Example wallet options */}
         <button
           onClick={connectWallet}
