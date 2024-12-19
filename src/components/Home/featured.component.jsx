@@ -3,9 +3,12 @@ import { useContext } from "react";
 import { ArtistImage, WithTheStars } from "../../utils/images";
 import ProgressBar from "./progress-bar.component";
 import { CartContext } from "../../context/CartContext";
+import { WalletContext } from "../../context/walletContext";
+import { Link } from "react-router-dom";
 
 const FeaturedComponent = () => {
   const { addToCart } = useContext(CartContext);
+  const { isWalletConnected } = useContext(WalletContext);
 
   const handleAddToCart = () => {
     const item = {
@@ -50,12 +53,21 @@ const FeaturedComponent = () => {
               </div>
             </div>
             <div className="flex flex-col lg:flex-row gap-[16px] mt-[30px] lg:mt-[58px]">
-              <button
-                onClick={handleAddToCart}
-                className="rounded-[87px] bg-[#23252B] w-full lg:w-[248px] h-[50px] lg:h-[67px] flex justify-center items-center text-white"
-              >
-                Buy
-              </button>
+              {!isWalletConnected ? (
+                <Link
+                  to="/wallet"
+                  className="rounded-[87px] bg-[#23252B] w-full lg:w-[248px] h-[50px] lg:h-[67px] flex justify-center items-center text-white"
+                >
+                  Buy
+                </Link>
+              ) : (
+                <button
+                  onClick={handleAddToCart}
+                  className="rounded-[87px] bg-[#23252B] w-full lg:w-[248px] h-[50px] lg:h-[67px] flex justify-center items-center text-white"
+                >
+                  Buy
+                </button>
+              )}
               <button className="rounded-[87px] border-[1px] border-[#23252B] w-full lg:w-[248px] h-[50px] lg:h-[67px] flex justify-center items-center text-[#23252B]">
                 See collection
               </button>
